@@ -1,0 +1,27 @@
+# Liveness Detection Configuration
+# Author: Soham Ashok Karpe, M. Eng. | DIT Campus Cham
+
+model:
+  path: "models/liveness_model.pt"
+  confidence: 0.5
+  iou_threshold: 0.45
+  device: "cpu"          # cpu | cuda | mps
+  img_size: 640
+
+camera:
+  width: 1280
+  height: 720
+  fps: 30
+
+inference:
+  img_size: 640
+  min_confidence: 0.5
+  batch_size: 1
+
+output:
+  save_video: false
+  output_dir: "results/"
+  show_fps: true
+
+logging:
+  level: "INFO"
